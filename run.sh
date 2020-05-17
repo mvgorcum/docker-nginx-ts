@@ -41,6 +41,11 @@ http {
             root /tmp;
             add_header  Cache-Control no-cache;
         }
+        location /dash {
+            # Serve DASH fragments
+            root /tmp;
+            add_header Cache-Control no-cache;
+        }
 
         location /on_publish {
             return  201;
@@ -96,6 +101,8 @@ if [ "${HLS}" = "true" ]; then
 cat >>${NGINX_CONFIG_FILE} <<!EOF
             hls on;
             hls_path /tmp/hls;
+            dash on;
+            dash_path /tmp/dash;
 !EOF
     HLS="false"
 fi
