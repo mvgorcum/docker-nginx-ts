@@ -29,7 +29,7 @@ docker run      \
     -p 1935:1935        \
     -p 8080:8080        \
     -e RTMP_STREAM_NAMES=live,teststream1,teststream2   \
-    jasonrivers/nginx-rtmp
+    mvgorcum/nginx-rtmp
 ```
 
 ### Pushing streams
@@ -39,7 +39,7 @@ docker run      \
     -p 1935:1935        \
     -p 8080:8080        \
     -e RTMP_PUSH_URLS=rtmp://live.youtube.com/myname/streamkey,rtmp://live.twitch.tv/app/streamkey
-    jasonrivers/nginx-rtmp
+    mvgorcum/nginx-rtmp
 ```
 
 ## OBS Configuration
